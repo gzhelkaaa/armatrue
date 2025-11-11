@@ -24,7 +24,7 @@ header {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 1000px;  /* ширина галереи */
+  max-width: 100px;  /* ширина галереи */
   margin: 0 auto;
 }
 
