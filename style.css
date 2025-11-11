@@ -34,7 +34,7 @@ header {
 }
 
 .item img {
-  width: 100%;        /* изображение растягивается на ширину блока */
+  width: 25%;        /* изображение растягивается на ширину блока */
   height: auto;       /* сохраняем пропорции */
   border-radius: 8px;
   transition: transform 0.2s;
