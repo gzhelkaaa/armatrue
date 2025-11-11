@@ -1,3 +1,4 @@
+/* Общие настройки */
 body {
   font-family: 'Arial', sans-serif;
   background: #fff;
@@ -5,36 +6,76 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* Шапка */
 header {
   text-align: center;
   padding: 50px 20px;
 }
+
+/* Галерея */
 #gallery {
   padding: 50px 20px;
   text-align: center;
 }
+
 .items {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  max-width: 1000px;  /* ширина галереи */
+  margin: 0 auto;
 }
+
+.item {
+  flex: 0 1 200px;    /* блоки галереи 200px шириной */
+  text-align: center;
+}
+
 .item img {
-  width: 200px;
-  height: auto;
+  width: 100%;        /* изображение растягивается на ширину блока */
+  height: auto;       /* сохраняем пропорции */
   border-radius: 8px;
   transition: transform 0.2s;
 }
+
 .item img:hover {
-  transform: scale(1.05);
+  transform: scale(1.05);  /* эффект наведения */
 }
+
+/* О бренде */
+#about {
+  padding: 50px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Футер */
 footer {
   text-align: center;
   padding: 30px 20px;
   font-size: 14px;
   color: #555;
 }
+
 a {
   color: #111;
   text-decoration: none;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 600px) {
+  .items {
+    gap: 15px;
+  }
+  .item {
+    flex: 0 1 100%;       /* блоки растягиваются на всю ширину контейнера */
+    max-width: 250px;     /* но не больше 250px */
+  }
+  .item img {
+    width: 100%;
+    max-width: 250px;
+  }
 }
